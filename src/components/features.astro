@@ -1,6 +1,14 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon/components';
+
+// We do this because https://tailwindcss.com/docs/content-configuration#dynamic-class-names
+const colors = {
+  pink: "mt-1 bg-pink rounded-full p-2 w-8 h-8 shrink-0",
+  yellow: "mt-1 bg-yellow rounded-full p-2 w-8 h-8 shrink-0",
+  blue: "mt-1 bg-blue rounded-full p-2 w-8 h-8 shrink-0",
+  sky: "mt-1 bg-sky rounded-full p-2 w-8 h-8 shrink-0"
+};
 
 const features = [
   {
@@ -59,7 +67,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class={`mt-1 bg-${item.color} rounded-full p-2 w-8 h-8 shrink-0`}>
+        <div class={colors[item.color]}>
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
