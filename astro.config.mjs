@@ -14,6 +14,7 @@ export default defineConfig({
       mdi: ["*"],
       bi: ["*"],
       ci: ["*"],
+      uil: ["*"],
       'simple-icons': ["*"]
     },
   })],
