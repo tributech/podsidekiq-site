@@ -4,50 +4,54 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Curate Anywhere, Collaborate Everywhere",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Capture and organize ideas easily with our Chrome plugin and inbox. Engage your audience in topic collaboration, transforming your podcast into a community-driven project.",
+    icon: "mdi:web",
+    color: "pink"
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Audience-Powered Content Creation",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Deepen listener relationships by letting them suggest and vote on content ideas, making your episodes more engaging and community-focused.",
+    icon: "mdi:people-group-outline",
+    color: "yellow"
   },
   {
-    title: "On-Demand Components",
+    title: "From Ideas to Episodes",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Turn ideas into episodes with ease using our tools. Coordinate with co-hosts, track progress, and schedule content, all in one place.",
+    icon: "ci:list-checklist",
+    color: "blue"
   },
   {
-    title: "Broad Integration",
+    title: "Runsheet Mastery",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Create runsheets to guide your recordings, ensuring consistency. Automatically generate detailed show notes from these plans, boosting engagement.",
+    icon: "mdi:clipboard-list",
+    color: "sky"
   },
   {
-    title: "SEO Enabled",
+    title: "Engage and Grow",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Involve your audience in shaping your podcast, using their ratings and topic contributions to refine content and build community.",
+    icon: "bi:graph-up",
+    color: "pink"
   },
   {
-    title: "Community",
+    title: "Smart Promotion Tools",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Use AI to find trending topics and create hashtags, helping your podcast reach new audiences and grow more effectively.",
+    icon: "mdi:hashtag-box",
+    color: "yellow"
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-All you need to kickstart your website
-  </h2>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Taking your Content from Ideas to Production</h2>
   <p class="text-lg mt-4 text-slate-600">
-Astro: Elevate your website game with innovation and industry excellence. Keep it sleek, keep it powerful.
+    Replace a dozen tools with a feature set that helps you manage your content, cohosts and audience
   </p>
 </div>
 
@@ -55,7 +59,7 @@ Astro: Elevate your website game with innovation and industry excellence. Keep i
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class={`mt-1 bg-${item.color} rounded-full p-2 w-8 h-8 shrink-0`}>
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
