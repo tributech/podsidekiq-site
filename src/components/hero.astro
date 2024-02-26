@@ -2,7 +2,7 @@
 import { Picture } from "astro:assets";
 import heroImage from "assets/astrolize.jpg";
 import Link from "@components/ui/link.astro";
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
 <main
@@ -20,32 +20,36 @@ import { Icon } from 'astro-icon/components';
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Your podcasting <span class="bg-gradient-to-r from-pink-600 via-yellow-500 to-pink-600 inline-block text-transparent bg-clip-text">Sidekick</span>
+      Your podcasting <span
+        class="bg-gradient-to-r from-pink-600 via-yellow-500 to-pink-600 inline-block text-transparent bg-clip-text"
+        >Sidekick</span
+      >
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Streamline your creative process with our platform, effortlessly transforming your ideas into polished content. Engage audiences, manage production seamlessly, and elevate your content from concept to completion.
+      Streamline your creative process with our platform, effortlessly
+      transforming your ideas into polished content. Engage audiences, manage
+      production seamlessly, and elevate your content from concept to
+      completion.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-        <Link
+      <Link
         size="lg"
         style="primary"
         rel="noopener"
         href="/contact"
         class="flex gap-1 items-center justify-center">
         <!-- <Icon class="text-white w-4 h-4" name="bx:bxl-github" /> -->
-         Free Trial
+        Free Trial
       </Link>
       <Link
-      size="lg"
-      style="outline"
-      rel="noopener"
-      href="/contact"
-      class="flex gap-1 items-center justify-center">
-      <!-- <Icon class="text-sky w-4 h-4" name="teenyicons:down-solid" /> -->
-       Learn More
-    </Link>
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="/contact"
+        class="flex gap-1 items-center justify-center">
+        <!-- <Icon class="text-sky w-4 h-4" name="teenyicons:down-solid" /> -->
+        Learn More
+      </Link>
     </div>
   </div>
- 
-</div>
 </main>

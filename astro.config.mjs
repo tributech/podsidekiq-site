@@ -7,7 +7,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fabform.io",
+  site: "https://podsidekiq.com",
   server: { host: '0.0.0.0'},
   integrations: [tailwind(), mdx(), sitemap(), icon({
     include: {

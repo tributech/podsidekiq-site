@@ -3,6 +3,8 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import podsidekiqLogo from "@assets/logo-pink-yellow.png";
+import { Picture } from "astro:assets";
 
 const menuitems = [
   {
@@ -31,9 +33,14 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold bg-gradient-to-r from-pink-600 via-yellow-500 to-pink-600 text-pink text-transparent bg-clip-text">Pod</span><span
-            class="text-slate-500">Sidekiq</span
           >
+          <Picture
+            src={podsidekiqLogo}
+            alt="PodSidekiq Logo"
+            width={200}
+            loading="eager"
+          />
+          
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
