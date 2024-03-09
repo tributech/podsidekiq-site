@@ -3,7 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import podsidekiqLogo from "@assets/logo-pink-yellow.png";
+import podsidekiqLogo from "@assets/logo-white.png";
 import { Picture } from "astro:assets";
 
 const menuitems = [
@@ -11,14 +11,16 @@ const menuitems = [
     title: "Features",
     path: "#",
     children: [
-      { title: "Something ", path: "/" },
-      { title: "Another something", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      { title: "Ideas and Curation", path: "/#feature-ideas" },  
+      { title: "Topic Management", path: "/#feature-topic" },
+      { title: "Runsheets and Shownotes", path: "/#feature-runsheet" },
+      { title: "Guest Management", path: "/contact", badge: true },
+      { title: "Hashtag Discovery & Analytics", path: "/contact", badge: true },
     ],
+    badge: true
   },
   {
-    title: "Pricing",
+    title: "Plans",
     path: "/pricing",
   },
   {
@@ -28,56 +30,58 @@ const menuitems = [
 ];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
-    <Astronav>
+<header class="absolute top-0 left-0 z-50 w-full bg-pink">
+    <div class="container mx-auto">
+      <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          >
-          <Picture
-            src={podsidekiqLogo}
-            alt="PodSidekiq Logo"
-            width={200}
-            loading="eager"
-          />
-          
-        </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+        <div class="max-w-full px-4">
+          <a href="/" class="block w-full py-5">
+            <Picture
+              src={podsidekiqLogo}
+              alt="PodSidekiq Logo"
+              width="160"
+              loading="eager"
+              class="w-full"
+            />
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-white" />
+          </div>
         </div>
-      </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
-          {
-            menuitems.map((item, index) => (
-              <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <ul class="flex flex-col lg:flex-row lg:gap-3">
+            {
+              menuitems.map((item, index) => (
+                <>
+                  {item.children && (
+                    <Dropdown
+                      title={item.title}
+                      children={item.children}
+                      lastItem={index === menuitems.length - 1}
+                    />
+                  )}
 
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
-                      <span> {item.title}</span>
-                      {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </a>
-                  </li>
-                )}
-              </>
-            ))
-          }
-        </ul>
-      </MenuItems>
-    </Astronav>
-  </header>
-</Container>
+                  {!item.children && (
+                    <li>
+                      <a
+                        href={item.path}
+                        class="flex lg:px-3 py-2 items-center text-white hover:text-pink-300">
+                        <span> {item.title}</span>
+                        {item.badge && (
+                          <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-pink-800 rounded-full">
+                            New
+                          </span>
+                        )}
+                      </a>
+                    </li>
+                  )}
+                </>
+              ))
+            }
+          </ul>
+        </MenuItems>
+      </div>
+      </Astronav>
+    </div>
+</header>
+

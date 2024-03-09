@@ -1,56 +1,52 @@
+---
+
+import feature01Image from 'assets/features01.png';
+import feature02Image from 'assets/features02.png';
+import { Picture } from 'astro:assets';
+---
 <section class="text-slate-600 body-font">
     <div class="container px-5 py-24 mx-auto">
-      <div class="flex items-center mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-        <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-          </svg>
+      <div class="flex items-center mx-auto pb-10 mb-10 sm:flex-row flex-col">
+        <div class="lg:w-1/2 w-full lg:mb-0 rounded-lg overflow-hidden">
+          <Picture src={feature01Image} alt="feature" width={500} height={400}/>
         </div>
-        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+        <div class="lg:w-1/2 w-full sm:text-left text-center  mx-10 mt-6 sm:mt-0">
+          <h2 id="feature-topic" class="text-gray-900 text-2xl title-font font-medium mb-2">Collaborative Topic Management</h2>
+          <p class="leading-relaxed text-slate-500">Transforming your podcast ideas into captivating episodes with our intuitive Kanban board. Designed specifically for content creators, this dynamic tool guides your topics through every stage: from initial research, through drafting, to final scheduling. Say goodbye to scattered notes and hello to organized, actionable plans.</p>
+          <a class="mt-3 text-pink-600 inline-flex items-center" href="/contact">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>
         </div>
       </div>
-      <div class="flex items-center mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+      <div class="flex items-center mx-auto pb-10 mb-10 sm:flex-row flex-col">
+        <div class="lg:w-1/2 w-full sm:text-left text-center  mx-10 mt-6 sm:mt-0">
+          <h2 id="feature-ideas" class="text-gray-900 text-2xl title-font font-medium mb-2">Curate and Crowd Source Ideas</h2>
+          <p class="leading-relaxed text-slate-500">Take your podcast to the next level by tapping into the collective wisdom of your audience. Our platform enables you to source, share, and vote on ideas directly from your listeners, creating a dynamic feedback loop that ensures your content truly resonates. By involving your audience in the creative process, you foster a deeper connection and ensure that every episode is filled with topics they care about.</p>
+          <a class="mt-3 text-pink-600 inline-flex items-center" href="/contact">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>
         </div>
-        <div class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-            <circle cx="6" cy="6" r="3"></circle>
-            <circle cx="6" cy="18" r="3"></circle>
-            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-          </svg>
+        <div class="lg:w-1/2 w-full lg:mb-0 rounded-lg overflow-hidden">
+          <Picture src={feature02Image} alt="feature" width={500} height={400}/>
         </div>
       </div>
-      <div class="flex items-center mx-auto sm:flex-row flex-col">
-        <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
+      <div class="flex items-center mx-auto pb-10 mb-10 sm:flex-row flex-col">
+        <div class="lg:w-1/2 w-full px-10 mx-10 lg:mb-0 rounded-lg overflow-hidden">
+          <img alt="feature" class="object-cover object-center h-full w-full" src="https://dummyimage.com/400x320">
         </div>
         <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">The 400 Blows</h2>
+          <h2 id="feature-runsheet" class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
           <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+          <a class="mt-3 text-pink-600 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>
         </div>
       </div>
-      <button class="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
     </div>
   </section>

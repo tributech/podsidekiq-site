@@ -15,9 +15,9 @@ module.exports = {
           '200': '#fbcfe3',
           '300': '#f9a8cc',
           '400': '#f472ac',
-          '500': '#ec4891',
-          'DEFAULT': '#ec4891',
-          '600': '#db2777',
+          '500': '#ec489a',
+          'DEFAULT': '#ec489a',
+          '600': '#DB2979',
           '700': '#be1862',
           '800': '#9d1753',
           '900': '#831848',
@@ -84,6 +84,16 @@ module.exports = {
         sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
       },
     },
+    container: {
+       // default breakpoints but with 40px removed
+       screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        xl: '1240px',
+        '2xl': '1320px',
+      },
+    }
   },
   plugins: [require("@tailwindcss/typography")],
 };

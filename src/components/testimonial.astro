@@ -1,13 +1,374 @@
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
+---
+import { Picture } from "astro:assets";
+import testimonialImage from "assets/testimonial01.jpg";
+---
+  <section
+  x-data="{activeItem: 1}"
+  class="pt-20 pb-20 lg:pt-[120px] lg:pb-[120px] dark:bg-dark"
+>
+  <div class="container mx-auto">
     <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-pink mb-8" viewBox="0 0 975.036 975.036">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-pink-600 mb-8" viewBox="0 0 975.036 975.036">
         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
       </svg>
-      <p class="leading-relaxed text-lg">As a co-host constantly juggling ideas and schedules, finding a platform like this has been a game-changer. It's incredibly user-friendly and not technical at all, making it a breeze for me to store and organize ideas from everywhere. What truly sets it apart is how effortlessly I can collaborate with my fellow co-hosts. We've been able to streamline our workflow, moving from a heap of scattered ideas to a structured, weekly podcast schedule. It's simplified our entire production process, allowing us more time to focus on creating content that resonates with our audience.</p>
-      <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6"></span>
-      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Newy Dad</h2>
-      <p class="text-gray-500">Old World Fanatics</p>
     </div>
-  </div>
+
+    <div class="-mx-4 flex flex-wrap justify-center">
+      <div class="w-full px-4 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+        <div x-show="activeItem === 1">
+          <div
+            class="relative items-center rounded-lg bg-[#F8F9FF] dark:bg-dark-2 py-10 px-10 md:flex lg:px-[70px]"
+          >
+            <div
+              class="relative z-10 mb-12 h-[165px] w-full max-w-[165px] rounded-full md:mb-0"
+            >
+              <Picture
+              src={testimonialImage}
+              alt="Testimonial Image"
+              loading="eager"
+              class="w-full rounded-full"
+            />
+
+              <div class="absolute left-0 top-0 z-[-1]">
+                <svg
+                  width="160"
+                  height="160"
+                  viewBox="0 0 160 160"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="-6.88525"
+                    y="18.9728"
+                    width="36.731"
+                    height="209.602"
+                    rx="18.3655"
+                    transform="rotate(-45 -6.88525 18.9728)"
+                    fill="#FACC15"
+                  />
+                </svg>
+              </div>
+              <div class="absolute -left-2 top-5 z-[-2]">
+                <svg
+                  width="152"
+                  height="152"
+                  viewBox="0 0 152 152"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="-5"
+                    y="12.5433"
+                    width="24.9386"
+                    height="204.237"
+                    rx="12.4693"
+                    transform="rotate(-45 -5 12.5433)"
+                    fill="#DB2979"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="w-full pl-0 md:pl-14">
+              <p class="text-body-color dark:text-dark-6 mb-6 text-base">
+                Stumbling upon this platform totally changed the game for me and my co-hosts. It’s super easy to use, even for a non-techy like me, making sorting out our ideas and schedules a piece of cake. We've gone from a mess of thoughts to a neat, weekly podcast plan. It's all about creating great content now, no sweat."
+              </p>
+              <h4 class="text-pink-600 mb-1 text-lg font-semibold">
+                NewyDad
+              </h4>
+              <h6 class="text-body-color dark:text-dark-6 text-sm font-normal italic">
+                Old World Fanatics
+              </h6>
+            </div>
+
+            <div>
+              <span class="absolute -left-5 -bottom-5 z-[-1]">
+                <svg
+                  width="77"
+                  height="77"
+                  viewBox="0 0 77 77"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="1.66343"
+                    cy="74.5221"
+                    r="1.66343"
+                    transform="rotate(-90 1.66343 74.5221)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="1.66343"
+                    cy="30.94"
+                    r="1.66343"
+                    transform="rotate(-90 1.66343 30.94)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="16.3016"
+                    cy="74.5221"
+                    r="1.66343"
+                    transform="rotate(-90 16.3016 74.5221)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="16.3016"
+                    cy="30.94"
+                    r="1.66343"
+                    transform="rotate(-90 16.3016 30.94)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="30.9398"
+                    cy="74.5221"
+                    r="1.66343"
+                    transform="rotate(-90 30.9398 74.5221)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="30.9398"
+                    cy="30.94"
+                    r="1.66343"
+                    transform="rotate(-90 30.9398 30.94)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="45.578"
+                    cy="74.5221"
+                    r="1.66343"
+                    transform="rotate(-90 45.578 74.5221)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="45.578"
+                    cy="30.94"
+                    r="1.66343"
+                    transform="rotate(-90 45.578 30.94)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="60.2162"
+                    cy="74.5216"
+                    r="1.66343"
+                    transform="rotate(-90 60.2162 74.5216)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="74.6634"
+                    cy="74.5216"
+                    r="1.66343"
+                    transform="rotate(-90 74.6634 74.5216)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="60.2162"
+                    cy="30.9398"
+                    r="1.66343"
+                    transform="rotate(-90 60.2162 30.9398)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="74.6634"
+                    cy="30.9398"
+                    r="1.66343"
+                    transform="rotate(-90 74.6634 30.9398)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="1.66343"
+                    cy="59.8839"
+                    r="1.66343"
+                    transform="rotate(-90 1.66343 59.8839)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="1.66343"
+                    cy="16.3017"
+                    r="1.66343"
+                    transform="rotate(-90 1.66343 16.3017)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="16.3016"
+                    cy="59.8839"
+                    r="1.66343"
+                    transform="rotate(-90 16.3016 59.8839)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="16.3016"
+                    cy="16.3018"
+                    r="1.66343"
+                    transform="rotate(-90 16.3016 16.3018)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="30.9398"
+                    cy="59.8839"
+                    r="1.66343"
+                    transform="rotate(-90 30.9398 59.8839)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="30.9398"
+                    cy="16.3018"
+                    r="1.66343"
+                    transform="rotate(-90 30.9398 16.3018)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="45.578"
+                    cy="59.8839"
+                    r="1.66343"
+                    transform="rotate(-90 45.578 59.8839)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="45.578"
+                    cy="16.3018"
+                    r="1.66343"
+                    transform="rotate(-90 45.578 16.3018)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="60.2162"
+                    cy="59.8839"
+                    r="1.66343"
+                    transform="rotate(-90 60.2162 59.8839)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="74.6634"
+                    cy="59.8839"
+                    r="1.66343"
+                    transform="rotate(-90 74.6634 59.8839)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="60.2162"
+                    cy="16.3017"
+                    r="1.66343"
+                    transform="rotate(-90 60.2162 16.3017)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="74.6634"
+                    cy="16.3017"
+                    r="1.66343"
+                    transform="rotate(-90 74.6634 16.3017)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="1.66343"
+                    cy="45.2455"
+                    r="1.66343"
+                    transform="rotate(-90 1.66343 45.2455)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="1.66343"
+                    cy="1.66347"
+                    r="1.66343"
+                    transform="rotate(-90 1.66343 1.66347)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="16.3016"
+                    cy="45.2455"
+                    r="1.66343"
+                    transform="rotate(-90 16.3016 45.2455)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="16.3016"
+                    cy="1.66347"
+                    r="1.66343"
+                    transform="rotate(-90 16.3016 1.66347)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="30.9398"
+                    cy="45.2455"
+                    r="1.66343"
+                    transform="rotate(-90 30.9398 45.2455)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="30.9398"
+                    cy="1.66347"
+                    r="1.66343"
+                    transform="rotate(-90 30.9398 1.66347)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="45.578"
+                    cy="45.2455"
+                    r="1.66343"
+                    transform="rotate(-90 45.578 45.2455)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="45.578"
+                    cy="1.66347"
+                    r="1.66343"
+                    transform="rotate(-90 45.578 1.66347)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="60.2162"
+                    cy="45.2457"
+                    r="1.66343"
+                    transform="rotate(-90 60.2162 45.2457)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="74.6634"
+                    cy="45.2457"
+                    r="1.66343"
+                    transform="rotate(-90 74.6634 45.2457)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="60.2162"
+                    cy="1.66371"
+                    r="1.66343"
+                    transform="rotate(-90 60.2162 1.66371)"
+                    fill="#FACC15"
+                  />
+                  <circle
+                    cx="74.6634"
+                    cy="1.66371"
+                    r="1.66343"
+                    transform="rotate(-90 74.6634 1.66371)"
+                    fill="#FACC15"
+                  />
+                </svg>
+              </span>
+              <span class="absolute -top-7 -right-4">
+                <svg
+                  width="58"
+                  height="60"
+                  viewBox="0 0 58 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M23 59.2671C23 44.8581 23 33.1774 23 33.1774C39.0163 33.1774 52 44.8581 52 59.2671C52 59.2671 52 59.2671 23 59.2671Z"
+                    fill="#FACC15"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M57 49.7009C57 22.8041 57 1 57 1C26.0721 1 1 22.8041 1 49.7009C1 49.7009 1 49.7009 57 49.7009Z"
+                    stroke="#DB2979"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+           
 </section>
+<!-- ====== Testimonials Section End -->

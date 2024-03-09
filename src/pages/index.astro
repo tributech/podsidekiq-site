@@ -7,15 +7,19 @@ import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import Testimonial from "@components/testimonial.astro";
 import FocusFeatures from "@components/focusfeatures.astro"
+import Workflow from "@components/workflow.astro";
 ---
 
 <Layout title="">
-  <Container>
+  <Container class="bg-pink pt-[120px] md:pt-[130px] lg:pt-[160px]">
     <Hero />
+  </Container>
+  <Container class="pt-[20px] md:pt-[30px] lg:pt-[60px]">
+    <Workflow />
+    <Testimonial />
     <Features />
     <Logos />
-    <Testimonial />
     <FocusFeatures />
     <Cta />
-  </Container>
+  </Container> 
 </Layout>

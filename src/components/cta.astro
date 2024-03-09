@@ -1,16 +1,94 @@
 ---
 import Link from "./ui/link.astro";
 ---
-<div class="bg-gradient-to-r from-pink-600 via-yellow-500 to-pink-600 p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <h2 class="text-white text-4xl md:text-6xl tracking-tight">
-    Supercharge Your Podcast!
-  </h2>
-  <p class="text-white mt-4 text-lg md:text-xl">
-    This template is a joy to work with as it runs on the very cool Astro.build. Yah! 
-  </p>
-  <div class="flex mt-5">
-    <Link href="/contact" style="inverted">Get Started Now</Link>
+
+<section class="py-10 lg:py-[60px]">
+  <div class="relative z-10 px-8 py-12 overflow-hidden rounded bg-pink md:py-20">
+    <div class="flex -mx-4">
+      <div class="w-full px-4">
+        <div class="mx-auto max-w-[570px] text-center">
+          <span class="block mb-4 text-base font-medium text-white">
+            Supercharge Your Podcast!
+          </span>
+          <h2
+            class="mb-5 text-3xl font-bold leading-tight text-white md:text-[40px]/[48px]"
+          >
+          Set your brain free to think and create 
+        </h2>
+          <p class="mb-8 text-base leading-relaxed text-white md:px-5">
+            PodSidekiq does the rest - Try us out today ☀️
+          </p>
+          <a
+            href="/contact"
+            class="inline-block py-4 text-base font-medium transition bg-white rounded-md px-7 text-primary hover:bg-opacity-90"
+          >
+            Free Trial
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden md:block">
+      <span class="absolute top-0 left-0 z-[-1]">
+        <svg
+          width="156"
+          height="343"
+          viewBox="0 0 156 343"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="-213"
+            y="175.925"
+            width="352.265"
+            height="175.956"
+            rx="37"
+            transform="rotate(-47.3095 -213 175.925)"
+            fill="#eabd08"
+          />
+          <rect
+            x="-225"
+            y="222.925"
+            width="352.265"
+            height="175.956"
+            rx="29"
+            transform="rotate(-47.3095 -225 222.925)"
+            stroke="#eabd08"
+            stroke-width="2"
+          />
+        </svg>
+      </span>
+      <span class="absolute bottom-0 right-0 z-[-1]">
+        <svg
+          width="215"
+          height="157"
+          viewBox="0 0 215 157"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="255.253"
+            y="448.005"
+            width="359.574"
+            height="236.524"
+            rx="22"
+            transform="rotate(-135 255.253 448.005)"
+            fill="#eabd08"
+          />
+          <rect
+            x="307.164"
+            y="343.427"
+            width="342.167"
+            height="143.513"
+            rx="31"
+            transform="rotate(-135 307.164 343.427)"
+            stroke="#eabd08"
+            stroke-width="2"
+          />
+        </svg>
+      </span>
+    </div>
   </div>
-</div>
+</section>
 
 

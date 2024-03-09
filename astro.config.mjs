@@ -15,7 +15,8 @@ export default defineConfig({
       bi: ["*"],
       ci: ["*"],
       uil: ["*"],
-      'simple-icons': ["*"]
+      'simple-icons': ["*"],
+      teenyicons: ["*"]
     },
   })],
 });
