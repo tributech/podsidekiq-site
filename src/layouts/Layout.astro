@@ -19,7 +19,7 @@ const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "For Content Creators"
-  : "PodSidekiq - The Platform for Content Creators";
+  : "PodSidekiq - The Platform to Grow your Show";
 ---
 
 <!DOCTYPE html>
@@ -60,22 +60,22 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astrolize is a starter website template for Astro build with TailwindCSS."
+      description="PodSidekiq is the Project Management tool you need to grow your podcast or stream to its full potential"
       canonical={canonicalURL}
       twitter={{
-        creator: "@fabform",
-        site: "@fabform",
+        creator: "@tributechau",
+        site: "@tributechau",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astrolize - Starter Template for Astro`,
+          title: `PodSidekiq - The Platform to Grow your Show`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astrolize Homepage Screenshot",
+          alt: "PodSidekiq Homepage Screenshot",
         },
       }}
     />
