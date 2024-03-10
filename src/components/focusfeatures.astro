@@ -2,6 +2,7 @@
 
 import feature01Image from 'assets/features01.png';
 import feature02Image from 'assets/features02.png';
+import feature03Image from 'assets/features03.png';
 import { Picture } from 'astro:assets';
 ---
 <section class="text-slate-600 body-font">
@@ -10,7 +11,7 @@ import { Picture } from 'astro:assets';
         <div class="lg:w-1/2 w-full lg:mb-0 rounded-lg overflow-hidden">
           <Picture src={feature01Image} alt="feature" width={500} height={400}/>
         </div>
-        <div class="lg:w-1/2 w-full sm:text-left text-center  mx-10 mt-6 sm:mt-0">
+        <div class="lg:w-1/2 w-full sm:text-left text-center mx-10 mt-6 sm:mt-0">
           <h2 id="feature-topic" class="text-gray-900 text-2xl title-font font-medium mb-2">Collaborative Topic Management</h2>
           <p class="leading-relaxed text-slate-500">Transforming your podcast ideas into captivating episodes with our intuitive Kanban board. Designed specifically for content creators, this dynamic tool guides your topics through every stage: from initial research, through drafting, to final scheduling. Say goodbye to scattered notes and hello to organized, actionable plans.</p>
           <a class="mt-3 text-pink-600 inline-flex items-center" href="/contact">Learn More
@@ -21,7 +22,7 @@ import { Picture } from 'astro:assets';
         </div>
       </div>
       <div class="flex items-center mx-auto pb-10 mb-10 sm:flex-row flex-col">
-        <div class="lg:w-1/2 w-full sm:text-left text-center  mx-10 mt-6 sm:mt-0">
+        <div class="lg:w-1/2 w-full sm:text-left text-center mx-10 mt-6 sm:mt-0">
           <h2 id="feature-ideas" class="text-gray-900 text-2xl title-font font-medium mb-2">Curate and Crowd Source Ideas</h2>
           <p class="leading-relaxed text-slate-500">Take your podcast to the next level by tapping into the collective wisdom of your audience. Our platform enables you to source, share, and vote on ideas directly from your listeners, creating a dynamic feedback loop that ensures your content truly resonates. By involving your audience in the creative process, you foster a deeper connection and ensure that every episode is filled with topics they care about.</p>
           <a class="mt-3 text-pink-600 inline-flex items-center" href="/contact">Learn More
@@ -35,12 +36,12 @@ import { Picture } from 'astro:assets';
         </div>
       </div>
       <div class="flex items-center mx-auto pb-10 mb-10 sm:flex-row flex-col">
-        <div class="lg:w-1/2 w-full px-10 mx-10 lg:mb-0 rounded-lg overflow-hidden">
-          <img alt="feature" class="object-cover object-center h-full w-full" src="https://dummyimage.com/400x320">
+        <div class="lg:w-1/2 w-full lg:mb-0 rounded-lg overflow-hidden">
+          <Picture src={feature03Image} alt="feature" width={500} height={400}/>
         </div>
-        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-          <h2 id="feature-runsheet" class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+        <div class="lg:w-1/2 w-full sm:text-left text-center mt-6 sm:mt-0">
+          <h2 id="feature-runsheet" class="text-gray-900 text-lg title-font font-medium mb-2">Runsheets and Shownotes to make going live a breeze</h2>
+          <p class="leading-relaxed text-base">Our platform offers an integrated solution for podcasters, combining meticulously designed runsheets with automated, SEO-optimized show notes to streamline your episode management and enhance online visibility. These tools ensure each episode flows smoothly, maintains consistency, and captivates your audience while boosting your podcast’s search rankings. With customizable templates for detailed episode planning and automatic generation of comprehensive show notes, you're empowered to focus on creating engaging content and growing your community, making preparation and publication a breeze.</p>
           <a class="mt-3 text-pink-600 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
