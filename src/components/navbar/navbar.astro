@@ -30,26 +30,24 @@ const menuitems = [
 ];
 ---
 
-<header class="absolute top-0 left-0 z-50 w-full bg-pink">
-    <div class="container mx-auto">
+<header class="absolute top-0 left-0 z-50 w-full p-5 bg-pink">
+    <div class="container mx-auto lg:flex justify-between items-center">
       <Astronav closeOnClick>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <div class="max-w-full px-4">
-          <a href="/" class="block w-full py-5">
-            <Picture
-              src={podsidekiqLogo}
-              alt="PodSidekiq Logo"
-              width="160"
-              loading="eager"
-              class="w-full"
-            />
-          </a>
-          <div class="block lg:hidden">
-            <MenuIcon class="w-4 h-4 text-white" />
-          </div>
+        <div class="flex w-full lg:w-auto justify-between items-center">
+            <a href="/">
+              <Picture
+                src={podsidekiqLogo}
+                alt="PodSidekiq Logo"
+                width="160"
+                loading="eager"
+              />
+            </a>
+            <div class="block lg:hidden">
+              <MenuIcon class="w-6 h-6 text-white" />
+            </div>
         </div>
-        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-          <ul class="flex flex-col lg:flex-row lg:gap-3">
+        <MenuItems class="hidden lg:flex">
+          <ul class="flex flex-col lg:flex-row lg:gap-5 lg:bg-inherit bg-pink-300 px-2">
             {
               menuitems.map((item, index) => (
                 <>
@@ -88,7 +86,6 @@ const menuitems = [
             Sign Up
           </a>
         </div>
-      </div>
       </Astronav>
     </div>
 </header>
