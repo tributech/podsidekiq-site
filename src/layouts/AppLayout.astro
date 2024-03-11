@@ -1,0 +1,71 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter/index.css";
+import GoogleAnalyticsHead from "@components/google-analytics-head.astro";
+import GoogleAnalyticsBody from "@components/google-analytics-body.astro";
+
+export interface Props {
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.png",
+  Astro.site
+).toString();
+
+const { title } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "For Content Creators"
+  : "PodSidekiq - The Platform to Grow your Show";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <script defer data-domain="astrolize.fabform.io" src="https://plausible.io/js/script.js"></script>
+    
+    <GoogleAnalyticsHead />
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description="PodSidekiq is the Project Management tool you need to grow your podcast or stream to its full potential"
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@tributechau",
+        site: "@tributechau",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `PodSidekiq - The Platform to Grow your Show`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "PodSidekiq Homepage Screenshot",
+        },
+      }}
+    />
+  </head>
+  <body>
+    <GoogleAnalyticsBody />
+    
+    <slot />
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

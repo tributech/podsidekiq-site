@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-
+Disallow: /success
+Disallow: /sign_up_success
+Disallow: /sign_up
