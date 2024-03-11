@@ -1,0 +1,12 @@
+---
+const GTM_TRACKING_ID = import.meta.env.GTM_TRACKING_ID!;
+const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${GTM_TRACKING_ID}`;
+
+
+--- 
+
+ <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src={gaSrc}
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  
