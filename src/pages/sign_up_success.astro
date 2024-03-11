@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "../components/ui/button.astro";
+---
+
+<Layout title="Thanks for Signing up with us 🙏🏼">
+  <Container>
+    <Sectionhead>
+        <Fragment slot="highlight">Thank you</Fragment>
+        <Fragment slot="title">We're excited to hear from you</Fragment>
+        <Fragment slot="desc">
+          We haven't quite launched our product yet. However we are very interested to hear from those that find our offer intriguing.
+          We have only captured your email and firstname for now. We'll be in touch soon to get to know you better.
+        </Fragment>
+    </Sectionhead>
+        <section class="flex items-center justify-center m-10 pb-10">
+            <a
+                href="/"
+                class="inline-flex items-center justify-center rounded-md bg-pink-600 px-7 py-[14px] text-center text-base font-medium text-white hover:bg-pink/90"
+              >
+              Back Home 🏠
+              </a>
+        </section>
+  </Container>
+</Layout>
