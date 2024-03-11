@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
+import Google from '@auth/core/providers/google';
 
 
 // https://astro.build/config
@@ -19,4 +20,17 @@ export default defineConfig({
       teenyicons: ["*"]
     },
   })],
+  providers: [
+		GoogleProvider({
+			clientId: import.meta.env.GOOGLE_CLIENT_ID,
+			clientSecret: import.meta.env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
+		}),
+	],
 });
